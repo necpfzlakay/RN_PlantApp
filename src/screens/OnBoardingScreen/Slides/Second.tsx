@@ -20,7 +20,6 @@ const SecondScreen: React.FC = () => {
       //! I have met a unexpected issue in styles file
       style={[styles.container, { paddingTop: top, }]} >
 
-
       <CustomText>
         <CustomText
           text="Get plant "
@@ -39,21 +38,12 @@ const SecondScreen: React.FC = () => {
             resizeMode="contain"
           />
         </View>
-
       </CustomText>
-
-      {/* <Image
-        source={require('../../../assets/Images/onBoardingImages/object.png')}
-        style={styles.plantImage} /> */}
-
       <Image
         source={require('../../../assets/Images/onBoardingImages/iphone.png')}
         style={styles.secondContentImage}
       />
-      <View style={styles.flex} />
-      <View
-        style={styles.shadowView}
-      />
+
 
     </ImageBackground>
   )

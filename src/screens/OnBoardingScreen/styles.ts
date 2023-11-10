@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-import { colors, height, width } from "../../constants";
+import { calculatedPaddingHorizontal, colors, height, width } from "../../constants";
 
 
 
@@ -58,6 +58,10 @@ export const getStyles = () => StyleSheet.create({
     backgroundColor: colors.gray,
     marginHorizontal: 3,
   },
+  scrollView: {
+    width: width,
+    marginLeft: -calculatedPaddingHorizontal,
+  }
 
 
 
