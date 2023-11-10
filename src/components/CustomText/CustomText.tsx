@@ -43,15 +43,16 @@ const CustomText: React.FC<CustomTextProps> = ({
   fontSize,
   color,
   underline,
+  style,
   theme,
 }: CustomTextProps) => {
 
   const styles = getStyles({ center, fontWeight, fontSize, color, underline, theme, })
   return (
     <>
-      <Text style={styles.text}>
+      <Text style={[styles.text, style]}>
         {text ?? children}
-      </Text>
+      </Text >
     </>
   )
 }
