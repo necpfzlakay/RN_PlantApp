@@ -3,6 +3,7 @@ import React from "react"
 import { Image, TouchableOpacity, View } from "react-native"
 import { CustomText } from "../../components"
 import { colors } from "../../constants"
+import { getStyles } from "./styles"
 
 
 export const ItemSeprator = () => <View style={{ width: 10 }} />
@@ -16,34 +17,29 @@ type RenderHorizontalCardProps = {
   }
 }
 export const RenderHorizontalCard = ({ item }: RenderHorizontalCardProps) => {
-
+  const styles = getStyles()
   return (
     <>
-      <View
-        style={{
-          // borderWidth: 1,
-          width: 156,
-          height: 130,
-          borderRadius: 14,
-          backgroundColor: 'rgba(255, 255, 255, 0.08)',
-          padding: 16,
-          justifyContent: 'space-between'
-        }}
-      >
-        <View style={{
-          borderRadius: 8,
-          backgroundColor: 'rgba(0, 0, 0, 0.24)',
-          width: 36,
-          height: 36,
-
-          alignItems: 'center',
-          justifyContent: 'center'
-        }} >
-          <Image source={item.icon} style={{ width: 18, height: 18, }} />
+      <View style={styles.horizontalCardWrapper} >
+        <View style={styles.horizontalCardImageWrapper} >
+          <Image
+            source={item.icon}
+            style={styles.horizontalCardImage}
+          />
         </View>
         <View >
-          <CustomText text={item.title} color="white" fontWeight="medium" fontSize="xl" />
-          <CustomText text={item.subTitle} color={colors.gray} fontSize="mm" style={{ marginTop: 4 }} />
+          <CustomText
+            text={item.title}
+            color="white"
+            fontWeight="medium"
+            fontSize="xl"
+          />
+          <CustomText
+            text={item.subTitle}
+            color={colors.gray}
+            fontSize="mm"
+            style={styles.horizontalCardSubtext}
+          />
         </View>
       </View >
     </>
@@ -51,27 +47,39 @@ export const RenderHorizontalCard = ({ item }: RenderHorizontalCardProps) => {
 }
 
 type CustomIconButtonProps = {
-  children?: React.ReactNode
+  item: { title: string, description: string, isThereDiscount: boolean }
 }
-export const CustomIconButton = ({ children }: CustomIconButtonProps) => {
 
+export const CustomIconButton = ({ item }: CustomIconButtonProps) => {
+  const styles = getStyles()
   return (
     <>
       <TouchableOpacity
-        style={{
-          borderRadius: 14,
-          borderWidth: .8,
-          height: 60,
-          justifyContent: 'center',
-          padding: 16,
-          borderColor: 'rgba(255, 255, 255, 0.3)',
-          backgroundColor: 'rgba(255, 255, 255, 0.05)',
-        }}
+        style={[
+          styles.touchableWrapper,
+          item?.isThereDiscount ? styles.discountedTouchable : null
+        ]}>
+        {item?.isThereDiscount ?
+          <View style={styles.discountPopup} >
+            <CustomText
+              text="Save 50%"
+              fontSize="m"
+              fontWeight="semibold"
+              style={styles.discountPopupText}
+            />
+          </View> : null //!! if we use && operator it may caouse performance leaks
+        }
+        <View
+          style={item?.isThereDiscount ? styles.discountedCircle : styles.undiscountedCircle}
+        >
+          <View style={item?.isThereDiscount ? styles.discountedInsideCircle : styles.undiscountedInsideCircle} />
+        </View>
+        <View style={styles.touchableContentWrapper} >
+          <CustomText text={item?.title} fontWeight="semibold" color={colors.white} fontSize="dd" />
+          <CustomText text={item?.description} color={colors.gray} fontSize="mm" />
+        </View>
 
-      >
-        {children}
       </TouchableOpacity>
     </>
   )
 }
-
