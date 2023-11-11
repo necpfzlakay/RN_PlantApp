@@ -29,7 +29,6 @@ const GetStartedScreen: React.FC<GetStartedScreenProps> = ({ navigation }) => {
         <Image style={styles.plantImage}
           source={require('../../assets/Images/getStartedPageImages/getStartedPlant.png')} />
 
-
         <View style={styles.topContainer} >
           <CustomText
             fontSize="xxxxl"

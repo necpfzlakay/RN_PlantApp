@@ -14,8 +14,6 @@ export const getStyles = () => StyleSheet.create({
   container: {
     width: width,
     alignItems: 'center',
-    // marginTop: topSafeArea ? topSafeArea + 20 : 20,
-    // borderWidth: 1,
     borderColor: 'red',
   },
   brushWrapper: {

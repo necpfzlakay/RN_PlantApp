@@ -17,7 +17,7 @@ const FirstScreen: React.FC = () => {
     <ImageBackground
       source={require('../../../assets/Images/onBoardingImages/firstBG.png')}
       //! I have met a unexpected issue in styles file
-      style={[styles.container, { paddingTop: top }]} >
+      style={[styles.container, { paddingTop: top + 20 }]} >
 
 
       <CustomText>

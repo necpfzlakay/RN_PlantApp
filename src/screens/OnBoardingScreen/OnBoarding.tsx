@@ -46,10 +46,9 @@ const OnBoardingScreen: React.FC = ({ navigation }: any) => {
         <View style={styles.flex} >
           <ScrollView
             ref={ref}
-            onMomentumScrollEnd={({ nativeEvent }) => handleScrolling(nativeEvent)}
-
             horizontal
             pagingEnabled
+            onMomentumScrollEnd={({ nativeEvent }) => handleScrolling(nativeEvent)}
             showsHorizontalScrollIndicator={false}
             bounces={false}
             style={styles.scrollView}
