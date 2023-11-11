@@ -24,6 +24,7 @@ const font_size = StyleSheet.create({
   d: { fontSize: 0.04 * width },    // 375 * 0.04 = 15
   mm: { fontSize: 0.035 * width },  // 375 * 0.035 = 13.125
   m: { fontSize: 0.03 * width },    // 375 * 0.03 = 11.25
+  ss: { fontSize: 0.025 * width },  // 375 * 0.025 = 9.375
   s: { fontSize: 0.02 * width },    // 375 * 0.02 = 7.5
   xs: { fontSize: 0.01 * width },   // 375 * 0.01 = 3.75
 });
