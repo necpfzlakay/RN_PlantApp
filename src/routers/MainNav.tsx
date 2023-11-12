@@ -14,6 +14,9 @@ const screenOptions = {
   contentStyle: { backgroundColor: 'white' }
 }
 
+//!! MainNav file storing all navigation stack includes tabsnav
+//!! screen names stores in different file
+//!! also screen options prevents the creating header bar on the screen
 const Stack = createNativeStackNavigator();
 const MainNav: React.FC = () => {
 

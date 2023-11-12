@@ -54,7 +54,7 @@ type PaywallScreenProps = {
   router: any
 }
 
-const PaywallScreen: React.FC<PaywallScreenProps> = ({ navigation, router }) => {
+const PaywallScreen: React.FC<PaywallScreenProps> = ({ navigation, router }: PaywallScreenProps) => {
 
 
   //!! It uses for navigating the home screen then clears the history

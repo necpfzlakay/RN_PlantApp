@@ -1,41 +1,19 @@
 import React from "react";
 import { StyleSheet, Text, TextProps } from "react-native";
 import { font_size, fonts_family } from "../../constants/fontsize";
-
-
-type TextThemeProps = {
-  regular?: boolean;
-  header?: boolean;
-  subHeader?: boolean;
-  title?: boolean;
-  subTitle?: boolean;
-  body?: boolean;
-  caption?: boolean;
-  small?: boolean;
-  size?: number;
-  transform?: "uppercase" | "lowercase" | "capitalize";
-  align?: "left" | "center" | "right";
-
-}
+import { CustomTextProps } from "../../Types";
+import { getStyles } from "./styles";
 
 
 
-type CustomTextProps = {
-  text?: string;
-  children?: React.ReactNode;
-  center?: boolean;
-  fontWeight?: "large" | "bold" | "semibold" | "medium" | "regular" | "light" | "thin"
-  fontSize?: "xxxxxl" | "xxxxl" | "xxxl" | "xxl" | "xl" | "l" | "dd" | "d" | "mm" | "m" | "s" | "xs"
-  color?: string,
-  underline?: boolean,
-  theme?: TextThemeProps
-
-} & TextProps;
 
 
-
+//! Custom Text component will be very important component in the app
+//!! we can manage all texts with this component
+//!! we can manage font weight, size or alignment with just one prop
+//!! it causes If we want to change all text in the application
+//!! It will be very easy thanks to this component
 const CustomText: React.FC<CustomTextProps> = ({
-
   text,
   children,
   center,
@@ -44,44 +22,23 @@ const CustomText: React.FC<CustomTextProps> = ({
   color,
   underline,
   style,
-  theme,
 }: CustomTextProps) => {
 
-  const styles = getStyles({ center, fontWeight, fontSize, color, underline, theme, })
+  const styles = getStyles({
+    center,
+    fontWeight,
+    fontSize,
+    color,
+    underline,
+  })
   return (
-    <>
-      <Text style={[styles.text, style]}>
-        {text ?? children}
-      </Text >
-    </>
+    <Text style={[styles.text, style]}>
+      {text ?? children}
+    </Text >
   )
 }
 
 export default CustomText;
 
-const getStyles = ({
-  fontWeight = 'regular',
-  fontSize = 'd',
-  color = 'black',
-  center,
-  underline = false,
-  // style,
-}: CustomTextProps) => StyleSheet.create({
-
-  text: {
-    textAlign: center ? 'center' : 'left',
-
-
-    color: color ?? 'black',
-    textDecorationLine: underline ? 'underline' : 'none',
-    ...fonts_family[fontWeight],
-
-    ...font_size[fontSize],
-    // flexWrap: 'wrap',
-    // alignSelf: 'flex-start',
-
-
-  }
-})
 
 

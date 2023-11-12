@@ -3,6 +3,7 @@ import { width } from "./dimensions";
 
 
 
+//! font family and font weights config
 const fonts_family: any = StyleSheet.create({
   large: { fontFamily: 'Rubik-ExtraBold', fontWeight: '800' },
   bold: { fontFamily: 'Rubik-Bold', fontWeight: '700' },
@@ -13,6 +14,7 @@ const fonts_family: any = StyleSheet.create({
   thin: { fontFamily: 'Rubik-Thin', fontWeight: '200' },
 });
 
+//! font sizes are calculated by device's width
 const font_size = StyleSheet.create({
   xxxxxl: { fontSize: 0.1 * width },// 375 * 0.1 = 37.5
   xxxxl: { fontSize: 0.09 * width },// 375 * 0.09 = 33.75

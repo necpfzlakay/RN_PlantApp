@@ -1,13 +1,12 @@
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
 import React from "react";
-import GetStartedScreen from "../screens/GetStartedScreen/GetStarted";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import HomeScreen from "../screens/HomeScreen/Home";
 import { NavigationScreens } from "../constants";
 
 
 
+//!! this is tabs navigator. It demonstrates Home Screen in all pages 
 const Tab = createBottomTabNavigator();
 const TabsNav: React.FC = () => {
 

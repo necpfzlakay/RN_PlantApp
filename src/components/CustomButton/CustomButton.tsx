@@ -2,32 +2,32 @@ import React from "react";
 import { StyleSheet, TouchableOpacity, TouchableOpacityProps } from "react-native";
 import CustomText from "../CustomText/CustomText";
 import { colors, width } from "../../constants";
+import { CustomButtonProps } from "../../Types";
+import { getStyles } from "./styles";
 
 
 
-
-type CustomButtonProps = {
-  title: string,
-  style?: TouchableOpacityProps['style'],
-  onPress?: () => void | undefined
-}
-
+//! this component uses for handling buttons that using in app
+//! It is a simple component that takes title, style and onPress function as props
+//todo: we can optimise and change buttons to atomic structure with this component
 const CustomButton: React.FC<CustomButtonProps> = ({
   title,
   style,
   onPress
 }: CustomButtonProps) => {
 
-  const styles = getStyles({});
+  const styles = getStyles();
   return (
     <>
-      <TouchableOpacity onPress={onPress} style={[styles.touchableContainer, style]} >
+      <TouchableOpacity
+        onPress={onPress}
+        style={[styles.touchableContainer, style]}
+      >
         <CustomText
           text={title}
           color={colors.white}
           fontSize="d"
           fontWeight="bold"
-
         />
       </TouchableOpacity>
     </>
@@ -35,18 +35,3 @@ const CustomButton: React.FC<CustomButtonProps> = ({
 }
 export default CustomButton;
 
-
-type StylesProps = {
-
-}
-const getStyles = ({ }: StylesProps) => StyleSheet.create({
-
-  touchableContainer: {
-    // borderWidth: 1,
-    width: 327 / 375 * width,
-    height: 56,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 12,
-  }
-})

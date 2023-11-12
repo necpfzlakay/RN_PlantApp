@@ -11,6 +11,8 @@ const premiumButtonBrown = "#24201A"
 const golden = "#F0D399"
 
 
+//!! constant color schemes!
+//todo: with a hook we can change the color scheme of the app (dark, light, etc.)
 export const colors = {
   black,
   white,
