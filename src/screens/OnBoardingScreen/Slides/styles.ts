@@ -13,7 +13,7 @@ export const getStyles = () => StyleSheet.create({
     paddingHorizontal: calculatedPaddingHorizontal,
   },
   brushWrapper: {
-    marginTop: -3,
+
   },
   flex: {
     flex: 1
@@ -23,14 +23,15 @@ export const getStyles = () => StyleSheet.create({
     height: 30,
     position: 'absolute',
     right: -15,
-    top: 30,
+    top: 7,
 
   },
   brushImage2: {
-    width: 150,
+    width: 155,
     height: 30,
     position: 'absolute',
-    top: 30,
+    right: 0,
+    top: 5,
   },
   contentImage: {
     width: width,

@@ -10,6 +10,7 @@ type CustomPageProps = {
   paddingHorizontal?: number
   backgroundImage?: any
   marginTop?: number
+  marginBottom?: number
 }
 
 
@@ -17,7 +18,8 @@ const CustomPage = ({
   marginTop,
   children,
   paddingHorizontal = calculatedPaddingHorizontal,
-  backgroundImage
+  backgroundImage,
+  marginBottom
 
 }: CustomPageProps) => {
 
@@ -25,7 +27,7 @@ const CustomPage = ({
   const { bottom, top, left, right } = useSafeAreaInsets()
   const styles = getStyles({
     bottom, top, paddingHorizontal,
-    marginTop,
+    marginTop, marginBottom,
     background: backgroundImage ? 'transparent' : 'white',
 
   });
@@ -55,6 +57,7 @@ type StylesProps = {
   paddingHorizontal?: number,
   background?: string,
   marginTop?: number,
+  marginBottom?: number,
 
 }
 const getStyles = ({
@@ -62,6 +65,7 @@ const getStyles = ({
   top,
   paddingHorizontal,
   marginTop,
+  marginBottom,
   background = 'white',
 }: StylesProps) => StyleSheet.create({
   imageBackground: {
@@ -72,7 +76,7 @@ const getStyles = ({
     flex: 1,
     //! to controlling safe areas
     //! if marginBottom is not provided, use custom bottom statusbar height or default 8
-    marginBottom: bottom ? bottom : 8,
+    marginBottom: marginBottom ? marginBottom : bottom ? bottom : 8,
     //! if marginTop is not provided, use custom top statusbar height or default 8
     marginTop: marginTop ? marginTop : top ? top : 8,
     paddingHorizontal,

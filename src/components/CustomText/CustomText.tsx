@@ -73,13 +73,13 @@ const getStyles = ({
 
 
     color: color ?? 'black',
-
+    textDecorationLine: underline ? 'underline' : 'none',
     ...fonts_family[fontWeight],
+
     ...font_size[fontSize],
     // flexWrap: 'wrap',
     // alignSelf: 'flex-start',
 
-    textDecorationLine: underline ? 'underline' : null,
 
   }
 })

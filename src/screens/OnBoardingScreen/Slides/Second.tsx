@@ -26,12 +26,12 @@ const SecondScreen: React.FC = () => {
           fontSize="xxl"
           fontWeight="medium"
         />
-        <View style={styles.brushWrapper} >
           <CustomText
             text="care guides"
             fontSize="xxl"
             fontWeight="large"
           />
+        <View style={styles.brushWrapper} >
           <Image
             source={require('../../../assets/Images/onBoardingImages/Brush.png')}
             style={styles.brushImage2}

@@ -9,7 +9,8 @@ export const getStyles = () => StyleSheet.create({
 
   topContainer: {
     marginTop: 20,
-    flexDirection: 'row'
+    flexDirection: 'row',
+    alignItems: 'flex-end',
   },
   plantImage: {
     width: width,

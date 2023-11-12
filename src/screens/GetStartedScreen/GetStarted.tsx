@@ -66,7 +66,7 @@ const GetStartedScreen: React.FC<GetStartedScreenProps> = ({ navigation }) => {
         <CustomText center fontSize="mm" color={colors.gray}
           text="By tapping next, you are agreeing to PlantID" />
 
-        <CustomText>
+        <CustomText center>
           <CustomText center fontSize="mm" underline color={colors.gray}
             text="Terms of Use" />
           <CustomText center fontSize="mm" color={colors.gray}

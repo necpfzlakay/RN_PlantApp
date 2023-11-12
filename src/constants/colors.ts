@@ -7,6 +7,8 @@ const white = '#ffffff';
 const gray = '#808080';
 const red = '#ff0000';
 const buttonGreen = "#28AF6E"
+const premiumButtonBrown = "#24201A"
+const golden = "#F0D399"
 
 
 export const colors = {
@@ -14,5 +16,7 @@ export const colors = {
   white,
   gray,
   red,
-  buttonGreen
+  buttonGreen,
+  premiumButtonBrown,
+  golden
 }

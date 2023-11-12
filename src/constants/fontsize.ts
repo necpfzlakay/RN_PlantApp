@@ -4,13 +4,13 @@ import { width } from "./dimensions";
 
 
 const fonts_family: any = StyleSheet.create({
-  large: { fontFamily: 'System', fontWeight: '800' },
-  bold: { fontFamily: 'System', fontWeight: '700' },
-  semibold: { fontFamily: 'System', fontWeight: '600' },
-  medium: { fontFamily: 'System', fontWeight: '500' },
-  regular: { fontFamily: 'System', fontWeight: '400' },
-  light: { fontFamily: 'System', fontWeight: '300' },
-  thin: { fontFamily: 'System', fontWeight: '200' },
+  large: { fontFamily: 'Rubik-ExtraBold', fontWeight: '800' },
+  bold: { fontFamily: 'Rubik-Bold', fontWeight: '700' },
+  semibold: { fontFamily: 'Rubik-SemiBold', fontWeight: '600' },
+  medium: { fontFamily: 'Rubik-Medium', fontWeight: '500' },
+  regular: { fontFamily: 'Rubik-Regular', fontWeight: '400' },
+  light: { fontFamily: 'Rubik-Light', fontWeight: '300' },
+  thin: { fontFamily: 'Rubik-Thin', fontWeight: '200' },
 });
 
 const font_size = StyleSheet.create({

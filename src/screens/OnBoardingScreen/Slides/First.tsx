@@ -26,12 +26,12 @@ const FirstScreen: React.FC = () => {
           fontSize="xxl"
           fontWeight="medium"
         />
-        <View style={styles.brushWrapper} >
-          <CustomText
-            text="identify"
-            fontSize="xxl"
-            fontWeight="large"
-          />
+        <CustomText
+          text="identify"
+          fontSize="xxl"
+          fontWeight="large"
+        />
+        <View  >
           <Image
             source={require('../../../assets/Images/onBoardingImages/Brush.png')}
             style={styles.brushImage}
