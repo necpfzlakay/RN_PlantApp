@@ -7,13 +7,19 @@
 
 import React from 'react';
 import Router from './Router';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+
+
+
+const queryClient = new QueryClient()
 
 function App(): JSX.Element {
-
-
   return (
     <>
-      <Router />
+      <QueryClientProvider client={queryClient}>
+        <Router />
+      </QueryClientProvider>
+
     </>
   );
 }
