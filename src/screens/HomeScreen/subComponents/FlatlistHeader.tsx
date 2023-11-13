@@ -8,7 +8,7 @@ import QuestionsSlide from "./QuestionsSlide";
 
 
 
-
+//!! this component is used in home screen's flatlist header
 const FlatlistHeader = () => {
 
   const styles = getStyles()
