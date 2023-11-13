@@ -25,11 +25,11 @@ yarn ios
 ###  Necip Fazıl Akay
 * Thanks for your review <3 
 * I tried the show my knowledge.
-* I also tried to take care of Structure, styling and pixelling and readibility. 
+* I also tried to take care of Structure, styling pixelling and readability. 
 * It will necessarily contain errors or mistakes so I am open to feedback
-* I used my own writing style, but with a team work, more beautiful and sustainable structures can be created
+* I used my own writing style, but with teamwork, more beautiful and sustainable structures can be created
 
-* I have 3 core custom component for Text, Button and page layout. Those are increasing the coding speed but they needs improve
+* I have 3 core custom components for Text, Button and page layout. Those are increasing the coding speed but they could write better
 
 
 --- 
@@ -45,11 +45,11 @@ yarn ios
 >
 >    @tanstack/react-query
 >
->    axios 
+>    Axios 
 >
->    react-native-asset - to adding fonts
+>    react-native-asset - to add fonts
 >
->    react-native-safe-area-context //added with react navigation
+>    react-native-safe-area-context //added with react-navigation
 >
 >    react-native-screens // added with react navigation
 >
