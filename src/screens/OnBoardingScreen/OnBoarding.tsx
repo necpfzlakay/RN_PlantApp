@@ -12,13 +12,18 @@ import { NavigationScreens, width } from "../../constants";
 
 const OnBoardingScreen: React.FC = ({ navigation }: any) => {
   const styles = getStyles();
-  const [index, setIndex] = React.useState(0);
-  const ref = useRef<ScrollView>(null);
+  const [index, setIndex] = React.useState(0); // page index state
+  const ref = useRef<ScrollView>(null); // reference of scrollview
+
   const dotArray = [1, 2, 3];
 
   //! it is changing state to 0 on mount 
   useEffect(() => setIndex(0), [])
 
+  //!! if user clicks to the continue button, 
+  //!! index will be increase 1 and
+  //!! scrollview will scroll to the second page
+  //!! if index is 1, it will navigate to paywall screen
   function handleOnPress() {
     if (index === 1) {
       navigation.navigate(NavigationScreens.PAYWALL_SCREEN);
@@ -28,8 +33,8 @@ const OnBoardingScreen: React.FC = ({ navigation }: any) => {
   }
 
   //! this function using for scrollView' s onMomentumScrollEnd prop
-  //! if user scroll the first page, it will set index to 0
-  //! or opposite 
+  //! if user scroll anywhere, nativeEvent will show us is it last 
+  //! or first page. we can calculate it with contentOffset.x
   function handleScrolling(nativeEvent: any) {
     // console.log(nativeEvent.contentOffset.x);
     if (nativeEvent.contentOffset.x < 15) {
@@ -59,7 +64,7 @@ const OnBoardingScreen: React.FC = ({ navigation }: any) => {
         </View>
 
         <CustomButton
-          title={'Get Started'}
+          title={'Continue'}
           style={styles.touchable}
           onPress={handleOnPress}
         />

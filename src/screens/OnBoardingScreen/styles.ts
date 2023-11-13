@@ -5,11 +5,6 @@ import { calculatedPaddingHorizontal, colors, height, width } from "../../consta
 
 
 
-type StylesProp = {
-  topSafeArea?: number | undefined
-}
-//! did not undestand why I can't transfer props to styles 
-//! so I wrote inline styles a little bit
 export const getStyles = () => StyleSheet.create({
   container: {
     width: width,
@@ -26,7 +21,7 @@ export const getStyles = () => StyleSheet.create({
     width: 140,
     height: 30,
     position: 'absolute',
-    right: -15,
+    right: '5%',
     top: 30,
 
   },

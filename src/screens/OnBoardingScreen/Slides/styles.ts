@@ -20,29 +20,33 @@ export const getStyles = () => StyleSheet.create({
   },
   brushImage: {
     width: 140,
-    height: 30,
+    height: 25,
     position: 'absolute',
-    right: -15,
-    top: 7,
+    right: -15 * width / 375,
+    top: 5,
 
   },
   brushImage2: {
     width: 155,
     height: 30,
     position: 'absolute',
-    right: 0,
+    right: -5 * width / 375,
     top: 5,
   },
   contentImage: {
     width: width,
-    height: '100%',
+    marginLeft: -calculatedPaddingHorizontal,
+    // height: 500,
+    flex: 1,
+    marginBottom: -5,
+    // borderWidth: 1,
     resizeMode: 'contain',
     transform: [
-      { scaleY: width / 375 },
-      { scaleX: width / 375 },
-      { translateY: height * .19 }
+      // { scaleY: width / 375 },
+      // { scaleX: width / 375 },
+      // { translateY: height * .15 }
     ],
-    position: 'absolute',
+    // position: 'absolute',
   },
   secondContentImage: {
     width: width,

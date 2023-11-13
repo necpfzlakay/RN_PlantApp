@@ -12,7 +12,9 @@ const TabsNav: React.FC = () => {
 
   return (
     <Tab.Navigator screenOptions={{ headerShown: false }} >
-      <Tab.Screen name={NavigationScreens.TAB1} component={HomeScreen} />
+      <Tab.Screen name={NavigationScreens.TAB1} component={HomeScreen} options={{
+        tabBarIcon: ({ focused }) => null
+      }} />
       <Tab.Screen name={NavigationScreens.TAB2} component={HomeScreen} />
       <Tab.Screen name={NavigationScreens.TAB3} component={HomeScreen} />
       <Tab.Screen name={NavigationScreens.TAB4} component={HomeScreen} />
@@ -22,3 +24,8 @@ const TabsNav: React.FC = () => {
 
 }
 export default TabsNav;
+const Tab1Icon = () => { }
+const Tab2Icon = () => { }
+const Tab3Icon = () => { }
+const Tab4Icon = () => { }
+const Tab5Icon = () => { }

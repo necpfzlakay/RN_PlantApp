@@ -32,6 +32,8 @@ const HomeScreen: React.FC = () => {
 
   //!! react-query V4 getting categories from dummy api 
   //!! and storing in redux 
+  //!! I used react query for caching and refetching data
+  //!! but redux thunk is also good with redux toolkit
   const { refetch, isLoading } = useQuery({
     queryKey: ['CATEGORIES_GET'],
     queryFn: CATEGORIES_GET, // category api calls with axios' interceptors

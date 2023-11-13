@@ -7,9 +7,10 @@ import { calculatedPaddingHorizontal, colors, width } from "../../../constants";
 
 
 
-
+//!! this component shows home screens horizontal questions cards
 const QuestionsSlide = () => {
 
+  //!! questions data are fetching from here
   const { data, isLoading } = useQuery({
     queryKey: ['getQuestionss'],
     queryFn: QUESTIONS_GET,

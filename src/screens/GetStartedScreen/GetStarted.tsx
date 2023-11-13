@@ -5,16 +5,18 @@ import { CustomButton, CustomPage, CustomText } from "../../components";
 import { height } from "../../constants/dimensions";
 import { colors } from "../../constants/colors";
 import { NavigationScreens } from "../../constants/navigationScreens";
+import { NavigationProp } from "@react-navigation/native";
 
 
 
 type GetStartedScreenProps = {
-  navigation: any
+  navigation: NavigationProp<any>;
 }
 
 
 const GetStartedScreen: React.FC<GetStartedScreenProps> = ({ navigation }) => {
 
+  //! get started button navigates to onboarding screen
   function handleOnPress() {
     navigation.navigate(NavigationScreens.ONBOARDING) // Navigate to Onboarding Screen
   }
@@ -22,10 +24,11 @@ const GetStartedScreen: React.FC<GetStartedScreenProps> = ({ navigation }) => {
   const styles = getStyles();
   return (
     <>
-
+      {/* //! Background image added with CustomPAge component */}
       <CustomPage
         backgroundImage={require("../../assets/Images/getStartedPageImages/Background.png")}
       >
+        {/* //! Plant image */}
         <Image style={styles.plantImage}
           source={require('../../assets/Images/getStartedPageImages/getStartedPlant.png')} />
 

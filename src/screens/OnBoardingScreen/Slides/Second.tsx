@@ -9,7 +9,7 @@ import { width } from "../../../constants";
 
 
 
-
+//! second bullet of the onboarding screen
 const SecondScreen: React.FC = () => {
   const { top } = useSafeAreaInsets();
   const styles = getStyles();
@@ -26,11 +26,11 @@ const SecondScreen: React.FC = () => {
           fontSize="xxl"
           fontWeight="medium"
         />
-          <CustomText
-            text="care guides"
-            fontSize="xxl"
-            fontWeight="large"
-          />
+        <CustomText
+          text="care guides"
+          fontSize="xxl"
+          fontWeight="large"
+        />
         <View style={styles.brushWrapper} >
           <Image
             source={require('../../../assets/Images/onBoardingImages/Brush.png')}

@@ -7,7 +7,7 @@ import { getStyles } from "./styles";
 import { NavigationScreens, calculatedPaddingHorizontal, colors, width } from "../../constants";
 import { CustomIconButton, ItemSeprator, RenderHorizontalCard } from "./SubComponents";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { CommonActions } from "@react-navigation/native";
+import { CommonActions, NavigationProp } from "@react-navigation/native";
 
 
 
@@ -50,11 +50,10 @@ const CardData = [
 
 
 type PaywallScreenProps = {
-  navigation: any,
-  router: any
+  navigation: NavigationProp<any>,
 }
 
-const PaywallScreen: React.FC<PaywallScreenProps> = ({ navigation, router }: PaywallScreenProps) => {
+const PaywallScreen: React.FC<PaywallScreenProps> = ({ navigation }: PaywallScreenProps) => {
 
 
   //!! It uses for navigating the home screen then clears the history

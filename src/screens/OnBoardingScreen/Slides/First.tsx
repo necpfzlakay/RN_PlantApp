@@ -8,7 +8,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 
 
-
+//!! first bullet of the onboarding screen
 const FirstScreen: React.FC = () => {
   const { top } = useSafeAreaInsets();
   const styles = getStyles();
@@ -16,7 +16,8 @@ const FirstScreen: React.FC = () => {
 
     <ImageBackground
       source={require('../../../assets/Images/onBoardingImages/firstBG.png')}
-      //! I have met a unexpected issue in styles file
+      //! Calculating safe area and adding it to paddingTop
+      //!! in this way we don't lose safe area's background image
       style={[styles.container, { paddingTop: top + 20 }]} >
 
 
@@ -46,6 +47,7 @@ const FirstScreen: React.FC = () => {
         fontWeight="medium"
       />
 
+      {/* //!! calling iphone image */}
       <Image
         source={require('../../../assets/Images/onBoardingImages/Content.png')}
         style={styles.contentImage}

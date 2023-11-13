@@ -13,6 +13,7 @@ import { getStyles } from "./styles";
 //!! we can manage font weight, size or alignment with just one prop
 //!! it causes If we want to change all text in the application
 //!! It will be very easy thanks to this component
+//todo: we can add language support with i18n
 const CustomText: React.FC<CustomTextProps> = ({
   text,
   children,
