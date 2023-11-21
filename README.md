@@ -1,5 +1,5 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
-# React Native Demo App!
+# React Native Demo PlantApp!
 ## Step 1: 
 
 ```bash
