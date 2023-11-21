@@ -1,5 +1,5 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
-# HUBX REACT NATIVE DEV CASE!
+# React Native Demo App!
 ## Step 1: 
 
 ```bash
@@ -21,15 +21,6 @@ yarn android
 ```bash
 yarn ios
 ```
-
-###  Necip Fazıl Akay
-* Thanks for your review <3 
-* I tried the show my knowledge.
-* I also tried to take care of Structure, styling pixelling and readability. 
-* It will necessarily contain errors or mistakes so I am open to feedback
-* I used my own writing style, but with teamwork, more beautiful and sustainable structures can be created
-
-* I have 3 core custom components for Text, Button and page layout. Those are increasing the coding speed but they could write better
 
 
 --- 
